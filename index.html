@@ -1,1 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CineArena.live</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <style>
+	
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+        }
+        /* Menu Styling */
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            
+            width: 100%;
+            z-index: 10;
+        }
 
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            transition: color 0.3s ease;
+        }
+
+        /* Neon Glow Effect */
+        .menu a::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background-color: rgba(0, 255, 255, 0.7);
+            animation: neon-border 3s infinite alternate;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        @keyframes neon-border {
+            0% {
+                box-shadow: 0 0 10px rgba(0, 255, 255, 1), 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+                background-color: rgba(0, 255, 255, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 10px rgba(255, 0, 255, 1), 0 0 20px rgba(255, 0, 255, 0.8), 0 0 30px rgba(255, 0, 255, 0.6);
+                background-color: rgba(255, 0, 255, 0.7);
+            }
+            100% {
+                box-shadow: 0 0 10px rgba(255, 255, 0, 1), 0 0 20px rgba(255, 255, 0, 0.8), 0 0 30px rgba(255, 255, 0, 0.6);
+                background-color: rgba(255, 255, 0, 0.7);
+            }
+        }
+        
+        .file-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+        }
+        .directory-item, .file-item {
+            margin: 10px;
+            text-align: center;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform .3s ease, box-shadow .3s ease;
+            background-color: #1a1a1a;
+            padding: 10px;
+            width: calc(14.28% - 20px);
+            box-sizing: border-box;
+        }
+        .directory-item img, .file-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            transition: transform .3s ease;
+        }
+        .directory-item a, .file-item a {
+            text-decoration: none;
+            color: #00bfff;
+            font-weight: 700;
+            display: block;
+            margin-top: 5px;
+            transition: color .3s ease;
+        }
+        .directory-item:hover, .file-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 255, 255, .3);
+        }
+        .directory-item img:hover, .file-item img:hover {
+            transform: scale(1.1);
+        }
+        .directory-item a:hover, .file-item a:hover {
+            color: #fff;
+        }
+        h1 {
+            text-align: center;
+            color: #00bfff;
+            margin-bottom: 20px;
+        }
+        .telegram-toggle {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: #0088cc;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .telegram-toggle:hover {
+            background-color: #006699;
+        }
+        @media (max-width: 1024px) {
+            .directory-item, .file-item {
+                width: calc(25% - 20px);
+            }
+        }
+        @media (max-width: 768px) {
+            .directory-item, .file-item {
+                width: calc(33.333% - 20px);
+            }
+        }
+        @media (max-width: 480px) {
+            .directory-item, .file-item {
+                width: calc(50% - 20px);
+                margin: 5px;
+                padding: 5px;
+            }
+            .telegram-toggle {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+            h1 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+        }
+
+        .sticky-footer {
+           position: fixed;
+           bottom: 0;
+           width: 100%;
+           background: #fff;
+           color: white;
+           text-align: center;
+           padding: 0px;
+        }
+        
+    </style>
+    
+</head>
+
+<body>
+	
+    <a href="https://t.me/cric_stream" class="telegram-toggle">Join Telegram</a>
+    <h1>CineArena.live</h1>
+    <div class="file-container">
+
+        <!-- Menu Section -->
+    <div class="menu">
+        <a href="https://cinearena.live">Sports</a>
+        <a href="https://cinearena.github.io/music/">Music</a>
+        <a href="https://cinearena.live/movies">Movies</a>
+    </div>
+   
+        
+
+    <div class='file-container'>
+
+        <div class='directory-item'>
+            <a href='https://cinearena.live/jwplyr?file=https://prod-sports-hin-fa.jiocinema.com/hls/live/2117033/inallow-ipl-2025/hin/1540040246/15mindvrm0153748b1625e24a9ebc935a7faca3fe7810april2025/master.m3u8'><img src='iplhin.jpg' alt='IPL Hindi'></a>
+            <a href='https://cinearena.live/jwplyr?file=https://prod-sports-hin-fa.jiocinema.com/hls/live/2117033/inallow-ipl-2025/hin/1540040246/15mindvrm0153748b1625e24a9ebc935a7faca3fe7810april2025/master.m3u8'>IPL Hindi</a></div>
+
+        <div class='directory-item'>
+            <a href='https://cinearena.live/jwplyr?file=https://prod-sports-eng-fa.jiocinema.com/hls/live/2117030/inallow-ipl-2025/eng/1540040246/15mindvrm0153748b1625e24a9ebc935a7faca3fe7810april2025/master_apm.m3u8'><img src='ipleng.jpg' alt='IPL English'></a>
+            <a href='https://cinearena.live/jwplyr?file=https://prod-sports-eng-fa.jiocinema.com/hls/live/2117030/inallow-ipl-2025/eng/1540040246/15mindvrm0153748b1625e24a9ebc935a7faca3fe7810april2025/master_apm.m3u8'>IPL English</a></div>
+
+        
+<!--
+        <div class='directory-item'>
+            <a href='willow2eng.html'><img src='willow2eng.jpg' alt='Willow 2'></a>
+            <a href='willow2eng.html'>Willow 2 English</a></div>
+         -->
+        <div class='directory-item'>
+            <a href='iplhin.html'><img src='star1hd.jpg' alt='Star 1 HD'></a>
+            <a href='iplhin.html'>Star Sports1 Hindi</a></div>
+        <!--
+        <div class='directory-item'>
+            <a href='https://cinearena.live/jwplyr?file=https://v18tataplaysyndication.akamaized.net/bpk-tv/Sports18_1_HD_voot_MOB/output03/hdntl=exp=1744190417~acl=%2f*~data=hdntl~hmac=30ee0759b03cdf4772c816cb38539d8a7aaede4e8c1e24d7951fd5cf6c4e9a7d/Sports18_1_HD_voot_MOB-audio_108038_eng=108000-video=2297600.m3u8'><img src='star2.jpg' alt='Star Sports 2'></a>
+            <a href='https://cinearena.live/jwplyr?file=https://v18tataplaysyndication.akamaized.net/bpk-tv/Sports18_1_HD_voot_MOB/output03/hdntl=exp=1744190417~acl=%2f*~data=hdntl~hmac=30ee0759b03cdf4772c816cb38539d8a7aaede4e8c1e24d7951fd5cf6c4e9a7d/Sports18_1_HD_voot_MOB-audio_108038_eng=108000-video=2297600.m3u8'>Star Sports 2 Hindi</a></div>
+        -->
+
+	    <div class='directory-item'>
+            <a href='https://cinearena.live/jwplyr?file=https://live-test.tsports.com/live-02/index.m3u8?hdnts=URLPrefix=aHR0cHM6Ly9saXZlLXRlc3QudHNwb3J0cy5jb20v~Expires=17440352763600~hmac=1f17add8b1400c4ca9fd8a4d773520ffccfb59ed0aab51695eeca5ef7bb14550'><img src='tsports.jpg' alt='tsports'></a>
+            <a href='https://cinearena.live/jwplyr?file=https://live-test.tsports.com/live-02/index.m3u8?hdnts=URLPrefix=aHR0cHM6Ly9saXZlLXRlc3QudHNwb3J0cy5jb20v~Expires=17440352763600~hmac=1f17add8b1400c4ca9fd8a4d773520ffccfb59ed0aab51695eeca5ef7bb14550'>T Sports</a></div>
+
+
+	    
+        <div class='directory-item'>
+            <a href='willowsports.html'><img src='willowsports.jpg' alt='Willow Sports'></a>
+            <a href='willowsports.html'>Willow Sports</a></div>
+        
+
+        
+        <div class='directory-item'>
+            <a href='wwe.html'><img src='wwe.jpg' alt='wwe'></a>
+            <a href='wwe.html'>WWE Network</a></div>
+        
+        <div class='directory-item'>
+            <a href='https://cinearena.live/jwplyr?file=https://re.fredflix.fun/playlist/eacf6c3f-0773-4bc3-a03a-cfee09f10348/playlist.m3u8'><img src='ptv1.jpg' alt='PTV'></a>
+            <a href='https://cinearena.live/jwplyr?file=https://re.fredflix.fun/playlist/eacf6c3f-0773-4bc3-a03a-cfee09f10348/playlist.m3u8'>PTV</a></div>
+        
+        <div class='directory-item'>
+            <a href='geosuper.html'><img src='geosuper.jpg' alt='Geo Super'></a>
+            <a href='geosuper.html'>Geo Super</a></div>
+
+        <div class='directory-item'>
+            <a href='tencricket.html'><img src='tencricket.jpg' alt='TEN CRICKET'></a>
+            <a href='tencricket.html'>TEN CRICKET</a></div>
+        
+        
+        <div class='directory-item'>
+            <a href='tnt1.html'><img src='tnt1.jpg' alt='TNT 1'></a>
+            <a href='tnt1.html'>TNT Sports 1</a></div>
+        
+        <div class='directory-item'>
+            <a href='https://cricstream4u.github.io/tnt-sports2/'><img src='tnt2.jpg' alt='TNT 2'></a>
+            <a href='https://cricstream4u.github.io/tnt-sports2/'>TNT Sports 2</a></div>
+
+        
+        <!--
+        <div class='directory-item'>
+            <a href='https://cricstream4u.github.io/willow/'><img src='willow.jpg' alt='Fancode Live Events'></a>
+            <a href='https://cricstream4u.github.io/willow/'>Willow 2</a></div>
+        -->
+        
+        
+      
+           </div>
+
+	
+        <br>
+	<br>
+	<br>
+
+    <script>
+        // Disable right-click
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        });
+        
+        // Disable keyboard shortcuts for DevTools
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "F12" || 
+                (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) ||
+                (e.ctrlKey && e.key === "U")) {
+                e.preventDefault();
+            }
+        });
+        
+        // Detect DevTools open
+        setInterval(function() {
+            if (window.outerHeight - window.innerHeight > 200 || window.outerWidth - window.innerWidth > 200) {
+                alert("Developer tools are disabled!");
+                window.location.reload();
+            }
+        }, 1000);
+    </script>
+
+    <!--Adsterra-->
+    
+    <div class="sticky-footer">
+	    
+    <script type="text/javascript">
+	atOptions = {
+		'key' : 'd57705b1f5d0f7abbb19cdb5dfe61249',
+		'format' : 'iframe',
+		'height' : 90,
+		'width' : 728,
+		'params' : {}
+	};
+   </script>
+   <script type="text/javascript" src="//carryglanced.com/d57705b1f5d0f7abbb19cdb5dfe61249/invoke.js"></script>
+    
+	    
+    </div>
+	    
+
+</body>
+      </html>
